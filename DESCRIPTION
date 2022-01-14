@@ -1,10 +1,10 @@
-Package: bcfpgr
-Title: Client for BC Fish REST API
+Package: fishobspgr
+Title: Client for BC Fish Observation and Passage RESTful API
 Version: 0.0.0.9000
 Authors@R: 
-    person("Seb", "Dalgarno", , "dalgarno@unbc.ca", role = c("aut", "cre"),
+    person("Seb", "Dalgarno", , "seb.dalgarno@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-3658-4517"))
-Description: Client for BC Fish REST API to access PostgreSQL database with BC fish data.
+Description: Client for BC Fish Observation and Passage RESTful API.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

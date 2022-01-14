@@ -13,28 +13,28 @@ knitr::opts_chunk$set(
 )
 ```
 
-# bcfpgr
+# fishobspgr
 
 <!-- badges: start -->
 <!-- badges: end -->
 
 ## Installation
 
-You can install the development version of bcfpgr from [GitHub](https://github.com/) with:
+You can install the development version of fishobspgr from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("poissonconsulting/bcfpgr")
+devtools::install_github("poissonconsulting/fishobspgr")
 ```
 
 ## Example
 
 ```{r example}
-library(bcfpgr)
+library(fishobspgr)
 ## basic example code
 ```
 
 ## Code of Conduct
 
-Please note that the bcfpgr project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+Please note that the fishobspgr project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 

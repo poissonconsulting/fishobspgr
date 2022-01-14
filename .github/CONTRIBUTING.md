@@ -1,6 +1,6 @@
-# Contributing to bcfpgr
+# Contributing to fishobspgr
 
-This outlines how to propose a change to bcfpgr. 
+This outlines how to propose a change to fishobspgr. 
 
 ## Fixing typos
 
@@ -41,6 +41,6 @@ Contributions with test cases included are easier to accept.
 
 ## Code of Conduct
 
-Please note that the bcfpgr project is released with a
+Please note that the fishobspgr project is released with a
 [Contributor Code of Conduct](/.github/CODE_OF_CONDUCT.md). 
 By contributing to this project you agree to abide by its terms.

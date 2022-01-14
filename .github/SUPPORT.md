@@ -1,6 +1,6 @@
-# Getting help with bcfpgr
+# Getting help with fishobspgr
 
-Thanks for using bcfpgr!
+Thanks for using fishobspgr!
 Before filing an issue, there are a few places to explore and pieces to put together to make the process as smooth as possible.
 
 ## Make sure its new
