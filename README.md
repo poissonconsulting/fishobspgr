@@ -9,7 +9,10 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-The goal of fishobspgr is to …
+`fishobspgr` is an R package that uses the `pgfeatureserv` package to
+query BC [fish observation](https://features.hillcrestgeo.ca/bcfishobs/)
+and [fish passage](https://features.hillcrestgeo.ca/bcfishpass/) web
+APIS.
 
 ## Installation
 
@@ -21,38 +24,58 @@ You can install the development version of fishobspgr from
 devtools::install_github("poissonconsulting/fishobspgr")
 ```
 
-## Example
+## Introduction
 
-This is a basic example which shows you how to solve a common problem:
+### Get Information on Collections
+
+Get information about the [observation
+collections](https://features.hillcrestgeo.ca/bcfishobs/), [passage
+collections](https://features.hillcrestgeo.ca/bcfishpass/) or a
+collection’s properties:
+
+-   [`fop_collections_observation()`](https://poissonconsulting.github.io/fishobspgr/reference/fop_collections_observation.html)  
+-   [`fop_collections_passage()`](https://poissonconsulting.github.io/fishobspgr/reference/fop_collections_passage.html)  
+-   [`fop_collection_observation_properties()`](https://poissonconsulting.github.io/fwapgr/reference/fop_collection_observation_properties.html)  
+-   [`fop_collection_passage_properties()`](https://poissonconsulting.github.io/fwapgr/reference/fop_collection_passage_properties.html)
+
+### Query a Collection
+
+Query features from a [observation
+collection](https://features.hillcrestgeo.ca/bcfishobs/collections.html)
+or [passage
+collection](https://features.hillcrestgeo.ca/bcfishpass/collections.html):
+
+-   [`fop_query_collection_observation()`](https://poissonconsulting.github.io/fishobspgr/reference/fop_query_collection_observation.html)  
+-   [`fop_query_collection_passage()`](https://poissonconsulting.github.io/fishobspgr/reference/fop_query_collection_passage.html)
+
+## Demonstration
+
+Query fish observation events from ‘CLAY’ watershed group with species
+code ‘CO’.
 
 ``` r
-library(fishobspgr)
-## basic example code
+collection_id <- "bcfishobs.fiss_fish_obsrvtn_events_sp"
+filter <- list(species_code = "CO", watershed_group_code = "CLAY")
+
+x <- fop_query_collection_observation(collection_id, filter = filter)
+x[1:5, 1:5]
+#>   agency_id           agency_name blue_line_key distance_to_stream
+#> 1      <NA>                  <NA>     354088196           57.68213
+#> 2      <NA>                  <NA>     354088366           12.00819
+#> 3      <NA>                  <NA>     354088440          162.59549
+#> 4      <NA> Consultants - General     354099135          249.54415
+#> 5      <NA>                  <NA>     354099837           46.67525
+#>   downstream_route_measure
+#> 1                 78.33563
+#> 2                  0.00000
+#> 3                  0.00000
+#> 4                  0.00000
+#> 5                293.05660
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+## Code of Conduct
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+Please note that the fishobspgr project is released with a [Contributor
+Code of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
