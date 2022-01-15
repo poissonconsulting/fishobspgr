@@ -17,6 +17,10 @@ fop_collections_passage()
 }
 \seealso{
 Other collections: 
-\code{\link{fop_collections_observation}()}
+\code{\link{fop_collection_observation_properties}()},
+\code{\link{fop_collection_passage_properties}()},
+\code{\link{fop_collections_observation}()},
+\code{\link{fop_query_collection_observation}()},
+\code{\link{fop_query_collection_passage}()}
 }
 \concept{collections}
