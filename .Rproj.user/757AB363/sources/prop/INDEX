@@ -1,3 +1,4 @@
+~%2FCode%2Ffishobspgr%2Ffishobspgr%2F.Rbuildignore="4632E805"
 ~%2FCode%2Ffishobspgr%2Ffishobspgr%2FDESCRIPTION="0233611B"
 ~%2FCode%2Ffishobspgr%2Ffishobspgr%2FNAMESPACE="750E9B5D"
 ~%2FCode%2Ffishobspgr%2Ffishobspgr%2FR%2Fcollection-properties.R="6AA97C47"
@@ -11,3 +12,4 @@
 ~%2FCode%2Ffishobspgr%2Ffishobspgr%2FREADME.Rmd="3A4018D0"
 ~%2FCode%2Ffishobspgr%2Ffishobspgr%2Fscripts%2Fbuild.R="D9929DE5"
 ~%2FCode%2Ffishobspgr%2Ffishobspgr%2Ftests%2Ftestthat%2Ftest-collection.R="1B9C6C7C"
+~%2FCode%2Ffishobspgr%2Ffishobspgr%2Ftests%2Ftestthat%2Ftest-collections.R="07FEBB7D"
