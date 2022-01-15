@@ -7,6 +7,9 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/poissonconsulting/fishobspgr/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/fishobspgr/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/poissonconsulting/fishobspgr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/fishobspgr?branch=main)
 <!-- badges: end -->
 
 `fishobspgr` is an R package that uses the `pgfeatureserv` package to
