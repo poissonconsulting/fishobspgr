@@ -8,8 +8,8 @@ test_that("observation collection works with default values ", {
   expect_s3_class(x, "sf")
   expect_s3_class(x, "tbl_df")
   expect_s3_class(x$geometry, "sfc_POINT")
-  # expect_identical(sf::st_crs(x)$epsg, 4326L)
-  # expect_identical(colnames(sf::st_coordinates(x)), c("X", "Y", "Z"))
+  expect_identical(sf::st_crs(x)$epsg, 4326L)
+  expect_identical(colnames(sf::st_coordinates(x)), c("X", "Y", "Z"))
 })
 
 test_that("passage collection works with default values ", {
@@ -22,8 +22,8 @@ test_that("passage collection works with default values ", {
   expect_s3_class(x, "sf")
   expect_s3_class(x, "tbl_df")
   expect_s3_class(x$geometry, "sfc_POINT")
-  # expect_identical(sf::st_crs(x)$epsg, 4326L)
-  # expect_identical(colnames(sf::st_coordinates(x)), c("X", "Y"))
+  expect_identical(sf::st_crs(x)$epsg, 4326L)
+  expect_identical(colnames(sf::st_coordinates(x)), c("X", "Y"))
 })
 
 # filter
@@ -51,6 +51,7 @@ test_that("collection observation filter works", {
   expect_identical(
     colnames(x), colnames
   )
+  testthat::skip_on_os("linux")
   expect_snapshot_data(x[setdiff(colnames, "geometry")], "co_clay")
 })
 
