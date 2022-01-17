@@ -103,10 +103,35 @@ transform function.</p></dd>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">collection_id</span> <span class="op">&lt;-</span> <span class="st">"bcfishpass.barriers_falls"</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
+<span class="r-in"><span class="va">collection_id</span> <span class="op">&lt;-</span> <span class="st">"bcfishpass.barriers_falls"</span></span>
 <span class="r-in"><span class="va">filter</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>barrier_type <span class="op">=</span> <span class="st">"FALLS"</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu">fop_query_collection_passage</span><span class="op">(</span><span class="va">collection_id</span>, filter <span class="op">=</span> <span class="va">filter</span><span class="op">)</span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> Input must be a vector, not a &lt;sfc_POINT/sfc&gt; object.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 159 features and 142 fields</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: POINT</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Dimension:     XY</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: -127.6438 ymin: 49.01794 xmax: -114.1039 ymax: 55.23527</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A data frame: 159 × 143</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    accessibility_model_salmon accessibility_m… accessibility_m… all_rearing_bel…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> <span style="color: #BB0000;">NA</span>                         <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>                              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> <span style="color: #BB0000;">NA</span>                         <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>                              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> <span style="color: #BB0000;">NA</span>                         <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>                              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> <span style="color: #BB0000;">NA</span>                         <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>                              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> <span style="color: #BB0000;">NA</span>                         <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>                              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> <span style="color: #BB0000;">NA</span>                         <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>                              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> <span style="color: #BB0000;">NA</span>                         <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>                              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> ACCESSIBLE                 <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>                              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> <span style="color: #BB0000;">NA</span>                         <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>                              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> <span style="color: #BB0000;">NA</span>                         <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>                              0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># … with 149 more rows, and 139 more variables: all_rearing_km &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   all_spawning_belowupstrbarriers_km &lt;dbl&gt;, all_spawning_km &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   all_spawningrearing_belowupstrbarriers_km &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   all_spawningrearing_km &lt;dbl&gt;, barrier_name &lt;chr&gt;, barrier_type &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   barriers_falls_id &lt;dbl&gt;, blue_line_key &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   ch_rearing_belowupstrbarriers_km &lt;dbl&gt;, ch_rearing_km &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   ch_spawning_belowupstrbarriers_km &lt;dbl&gt;, ch_spawning_km &lt;dbl&gt;, …</span></span>
 </code></pre></div>
     </div>
   </div>
