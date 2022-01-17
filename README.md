@@ -10,6 +10,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![R-CMD-check](https://github.com/poissonconsulting/fishobspgr/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/fishobspgr/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/fishobspgr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/fishobspgr?branch=main)
+[![License:
+MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
 `fishobspgr` is an R package that uses the `pgfeatureserv` package to
