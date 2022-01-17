@@ -6,6 +6,10 @@
 #' @return A tibble.
 #' @family collections
 #' @export
+#' @examples
+#' library(sf)
+#' collection_id <- "bcfishobs.fiss_fish_obsrvtn_events_sp"
+#' fop_collection_observation_properties(collection_id)
 fop_collection_observation_properties <- function(collection_id) {
   base_url <- api_url()
   path <- path_obs()
@@ -25,6 +29,10 @@ fop_collection_observation_properties <- function(collection_id) {
 #' @return A tibble.
 #' @family collections
 #' @export
+#' @examples
+#' library(sf)
+#' collection_id <- "bcfishpass.barriers_falls"
+#' fop_collection_passage_properties(collection_id)
 fop_collection_passage_properties <- function(collection_id) {
   base_url <- api_url()
   path <- path_pass()

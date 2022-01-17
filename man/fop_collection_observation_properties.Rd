@@ -15,6 +15,11 @@ A tibble.
 \description{
 Get information about a fish observation collection's column names.
 }
+\examples{
+library(sf)
+collection_id <- "bcfishobs.fiss_fish_obsrvtn_events_sp"
+fop_collection_observation_properties(collection_id)
+}
 \seealso{
 Other collections: 
 \code{\link{fop_collection_passage_properties}()},

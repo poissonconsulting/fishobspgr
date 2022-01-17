@@ -5,6 +5,9 @@
 #' @return A tibble.
 #' @family collections
 #' @export
+#' @examples
+#' library(sf)
+#' fop_collections_observation()
 fop_collections_observation <- function() {
   base_url <- api_url()
 
@@ -25,6 +28,9 @@ fop_collections_observation <- function() {
 #' @return A tibble.
 #' @family collections
 #' @export
+#' @examples
+#' library(sf)
+#' fop_collections_passage()
 fop_collections_passage <- function() {
   base_url <- api_url()
 

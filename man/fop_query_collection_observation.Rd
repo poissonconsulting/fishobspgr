@@ -52,6 +52,7 @@ transform function.}
 Query a collection from the BC Fish Observation API.
 }
 \examples{
+library(sf)
 collection_id <- "bcfishobs.fiss_fish_obsrvtn_events_sp"
 filter <- list(species_code = "CO", watershed_group_code = "CLAY")
 fop_query_collection_observation(collection_id, filter = filter)

@@ -12,6 +12,10 @@ A tibble.
 \description{
 Get information about the BC Fish Passage collections.
 }
+\examples{
+library(sf)
+fop_collections_passage()
+}
 \seealso{
 Other collections: 
 \code{\link{fop_collection_observation_properties}()},

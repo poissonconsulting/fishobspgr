@@ -52,6 +52,7 @@ transform function.}
 Query a collection from the BC Fish Observation API.
 }
 \examples{
+library(sf)
 collection_id <- "bcfishpass.barriers_falls"
 filter <- list(barrier_type = "FALLS")
 fop_query_collection_passage(collection_id, filter = filter)

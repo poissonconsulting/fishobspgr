@@ -11,7 +11,7 @@ fop_query_collection <- function(path,
   base_url <- api_url()
   user <- gh_user()
 
-  pgfeatureserv::pgf_collection_features(
+  x <- pgfeatureserv::pgf_collection_features(
     collection_id = collection_id,
     base_url = base_url,
     path = path,
@@ -25,6 +25,7 @@ fop_query_collection <- function(path,
     groupby = groupby,
     user = user
   )
+  return(x)
 }
 
 #' Query BC Fish Observation Collection
@@ -35,6 +36,7 @@ fop_query_collection <- function(path,
 #' @family collections
 #' @export
 #' @examples
+#' library(sf)
 #' collection_id <- "bcfishobs.fiss_fish_obsrvtn_events_sp"
 #' filter <- list(species_code = "CO", watershed_group_code = "CLAY")
 #' fop_query_collection_observation(collection_id, filter = filter)
@@ -71,6 +73,7 @@ fop_query_collection_observation <- function(collection_id,
 #' @family collections
 #' @export
 #' @examples
+#' library(sf)
 #' collection_id <- "bcfishpass.barriers_falls"
 #' filter <- list(barrier_type = "FALLS")
 #' fop_query_collection_passage(collection_id, filter = filter)

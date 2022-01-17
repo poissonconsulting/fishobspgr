@@ -15,6 +15,11 @@ A tibble.
 \description{
 Get information about a fish passage collection's column names.
 }
+\examples{
+library(sf)
+collection_id <- "bcfishpass.barriers_falls"
+fop_collection_passage_properties(collection_id)
+}
 \seealso{
 Other collections: 
 \code{\link{fop_collection_observation_properties}()},
