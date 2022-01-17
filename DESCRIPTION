@@ -1,6 +1,6 @@
 Package: fishobspgr
 Title: Client for BC Fish Observation and Passage RESTful API
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: 
     person("Seb", "Dalgarno", , "seb.dalgarno@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-3658-4517"))
