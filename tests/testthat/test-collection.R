@@ -41,15 +41,29 @@ test_that("collection observation filter works", {
   expect_true(all(x$watershed_group_code == "CLAY"))
 
   colnames <- c(
-    "agency_id", "agency_name", "blue_line_key", "distance_to_stream",
-    "downstream_route_measure", "fish_observation_point_id", "linear_feature_id",
-    "localcode_ltree", "match_type", "observation_date", "source", "source_ref",
-    "species_code", "species_id", "waterbody_key", "watershed_group_code",
-    "wscode_ltree", "geometry"
+    "agency_id",
+    "agency_name",
+    "blue_line_key",
+    "distance_to_stream",
+    "downstream_route_measure",
+    "fish_observation_point_id",
+    "linear_feature_id",
+    "localcode_ltree",
+    "match_type",
+    "observation_date",
+    "source",
+    "source_ref",
+    "species_code",
+    "species_id",
+    "waterbody_key",
+    "watershed_group_code",
+    "wscode_ltree",
+    "geometry"
   )
 
   expect_identical(
-    colnames(x), colnames
+    colnames(x),
+    colnames
   )
   testthat::skip_on_os("linux")
   expect_snapshot_data(x[setdiff(colnames, "geometry")], "co_clay")
@@ -102,7 +116,8 @@ test_that("collection informative error invalid bbox", {
 
 test_that("collection informative error invalid bbox", {
   collection_id <- "bcfishobs.fiss_fish_obsrvtn_events_sp"
-  expect_chk_error(fop_query_collection_observation(collection_id,
-                                                    filter = c(1)
+  expect_chk_error(fop_query_collection_observation(
+    collection_id,
+    filter = c(1)
   ))
 })
